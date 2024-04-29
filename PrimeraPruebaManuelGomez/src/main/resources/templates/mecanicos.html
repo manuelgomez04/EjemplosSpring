@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Página</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/boton.css">
+</head>
+
+<body>
+    <!-- Banner como imagen -->
+    <div th:replace="~{fragmentos/banner::banner}"></div>
+
+    <nav th:replace="~{fragmentos/menu::menu}"></nav>
+
+    <!-- Contenido de la página -->
+    <div class="container mt-4 contenido">
+        <div class="row justify-content-center">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Dni</th>
+                            <th>Salario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each=" piloto : ${pilotoForm}">
+                            <td th:text="${piloto.nombre}"></td>
+                            <td th:text="${piloto.apellidos}"></td>
+                            <td th:text="${piloto.dni}"></td>
+                            <td th:text="${piloto.salario}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para otra página -->
+    <div class="container text-center mt-4 boton">
+        <a href="../HTML/repuestos.html" class="btn btn-primary">Ir a Otra Página</a>
+    </div>
+
+    <footer th:replace="~{fragmentos/footer::footer}">
+    </footer>
+
+    <!-- Enlace a Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

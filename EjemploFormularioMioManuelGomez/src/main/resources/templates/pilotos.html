@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"  xmlns="http://www.thymeleaf.org">
+<html lang="es"  xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -12,10 +12,7 @@
 
 
 <body>
-    <div >
-        <img src="../Imagenes/banner.png" alt="Banner">
-    </div>
-
+   <div th:replace="~{fragmentos/banner::banner}"></div>
     <!-- Menú de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">

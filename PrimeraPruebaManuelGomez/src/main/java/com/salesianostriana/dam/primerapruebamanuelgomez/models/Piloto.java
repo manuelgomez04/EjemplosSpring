@@ -17,7 +17,7 @@ public class Piloto {
 
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 
 	private String nombre;
 	private String apellidos;

@@ -25,16 +25,17 @@ public class PilotoController {
 	@GetMapping("/piloto")
 	public String addPiloto(Model model) {
 		Piloto piloto = new Piloto();
-		model.addAttribute("pilotoForm", piloto);
+		model.addAttribute("pilotos", piloto);
 		return "formulario";
 	}
 
 	@PostMapping("/addPiloto")
 	public String showPiloto(@ModelAttribute("pilotoForm") Piloto piloto, Model model) {
 
-		model.addAttribute("piloto", piloto);
+		// model.addAttribute("piloto", piloto);
+		pilotoService.save(piloto);
 
-		pilotoService.agregarBD(piloto);
+		model.addAttribute("listaCompleta", pilotoService.findAll());
 
 		return "mecanicos";
 	}

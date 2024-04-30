@@ -99,4 +99,4 @@ insert into piloto (id, nombre, apellidos, dni, salario) values (98, 'Nedi', 'Co
 insert into piloto (id, nombre, apellidos, dni, salario) values (99, 'Cord', 'Shipperbottom', 'Oyoyo', 70543.07);
 insert into piloto (id, nombre, apellidos, dni, salario) values (100, 'Sig', 'Sutehall', 'Centidel', 84317.38);
 
-ALTER SEQUENCE piloto_seq RESTART WITH (200);
+ALTER SEQUENCE piloto_seq RESTART WITH (151);

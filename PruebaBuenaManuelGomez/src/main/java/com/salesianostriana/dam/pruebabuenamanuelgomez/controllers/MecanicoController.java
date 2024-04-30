@@ -16,17 +16,17 @@ public class MecanicoController {
 	@Autowired
 	private MecanicoService mecanicoService;
 
-	@GetMapping("/mecanico")
+	@GetMapping("/mecanicos")
 	public String lista(Model model) {
 		model.addAttribute("listaCompleta", mecanicoService.findAll());
 		return "mecanicos";
 	}
 
-	@GetMapping("/mecanicos")
+	@GetMapping("/mecanicoFormAdd")
 	public String adddMecanico(Model model) {
 		Mecanico mecanico = new Mecanico();
 		model.addAttribute("mecanicoForm", mecanico);
-		return "formulario";
+		return "mecanicoFormAdd";
 	}
 
 	@PostMapping("/addMecanico")

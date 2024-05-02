@@ -7,7 +7,10 @@
     <title>Mi Página Web</title>
     <!-- Enlace a Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/boton.css">
+    <link rel="stylesheet" href="../CSS/boton.css" th:href="@{/CSS/boton.css}">
+    <script src="../JS/carrera.js" defer th:href="@{/JS/carrera.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -47,17 +50,13 @@
 
     <!-- Botón para otra página -->
     <div class="container text-center mt-4 boton2">
-        <button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='/coches' "
-            th:action="coches">Siguiente página</button>
+        <button type="submit" class="btn btn-primary btn-block" id="carreraBtn" th:action="coches">Siguiente página</button>
     </div>
 
 
     <!-- Pie de página a 3 columnas -->
     <footer th:replace="~{fragmentos/footer::footer}">
     </footer>
-
-    <!-- Enlace a Bootstrap JS (opcional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

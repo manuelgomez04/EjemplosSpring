@@ -7,14 +7,17 @@
     <title>Nueva Página</title>
     <!-- Enlace a Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/boton.css">
-    <link rel="stylesheet" href="../CSS/tarjeta.css">
+    <link rel="stylesheet" href="../CSS/boton.css" th:href="@{CSS/boton.css}">
+    <link rel="stylesheet" href="../CSS/tarjeta.css" th:href="@{/css/tarjeta.css}">
+    <script src="../JS/coche.js" th:href="@{/JS/coche.js}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
     <div th:replace="~{fragmentos/banner::banner}"></div>
 
-	<nav th:replace="~{fragmentos/menu::menu}"></nav>
+    <nav th:replace="~{fragmentos/menu::menu}"></nav>
 
     <!-- Contenido de la página -->
     <div class="container mt-4 contenido">
@@ -49,16 +52,14 @@
     </div>
 
     <!-- Botón para otra página -->
-	<div class="container text-center mt-4 boton2">
-	       <button type="submit" class="btn btn-primary btn-block" onclick="window.location.href='/pilotos' "
-	           th:action="pilotos">Siguiente página</button>
-	</div>
-	
-	<footer th:replace="~{fragmentos/footer::footer}">
-	    </footer>
+    <div class="container text-center mt-4 boton2">
+        <button type="submit" class="btn btn-primary btn-block" id="siguienteBtn" th:action="pilotos">Siguiente
+            página</button>
+    </div>
 
-    <!-- Enlace a Bootstrap JS (opcional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer th:replace="~{fragmentos/footer::footer}">
+    </footer>
+
 </body>
 
 </html>

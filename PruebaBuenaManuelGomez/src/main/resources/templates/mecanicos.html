@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="mecanico : ${listaCompleta}">
+                        <tr th:each="mecanico : ${listaCompletaMecanicos}">
                             <td th:text="${mecanico.nombre}"></td>
                             <td th:text="${mecanico.apellidos}"></td>
                             <td th:text="${mecanico.dni}"></td>

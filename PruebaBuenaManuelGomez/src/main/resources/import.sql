@@ -8,25 +8,6 @@ insert into mecanico (id, nombre, apellidos, dni, salario) values (7, 'Jo-anne',
 insert into mecanico (id, nombre, apellidos, dni, salario) values (8, 'Shea', 'Roobottom', 'Jetwire', 73821.48);
 insert into mecanico (id, nombre, apellidos, dni, salario) values (9, 'Cele', 'Gathercoal', 'Viva', 99070.69);
 insert into mecanico (id, nombre, apellidos, dni, salario) values (10, 'Kane', 'MacMurray', 'Kamba', 26255.46);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (11, 'Wayne', 'Silverston', 'Bubbletube', 5864.21);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (12, 'Bev', 'Hackelton', 'Cogibox', 14765.45);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (13, 'Gayleen', 'Bailes', 'Vinte', 59951.34);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (14, 'Durant', 'Eckly', 'Zooveo', 31701.95);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (15, 'Morlee', 'Calvard', 'Eazzy', 62350.99);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (16, 'Dar', 'Damiral', 'Dablist', 89453.5);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (17, 'Adore', 'Cubbin', 'Linkbuzz', 20941.42);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (18, 'Nichole', 'Slyme', 'Eabox', 93383.75);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (19, 'Any', 'Gauld', 'Bubbletube', 65151.26);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (20, 'Ulberto', 'Storrs', 'Tekfly', 92757.14);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (21, 'Kimmie', 'Scothron', 'Realblab', 41657.37);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (22, 'Harp', 'Stud', 'Photofeed', 7708.88);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (23, 'Fabien', 'Jinkin', 'Centidel', 80968.25);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (24, 'Joete', 'Matignon', 'Meevee', 80607.26);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (25, 'Barnie', 'Burgher', 'Photojam', 20057.39);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (26, 'Elinore', 'Anear', 'Roomm', 5783.83);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (27, 'Kerrin', 'Pirnie', 'Flipstorm', 61056.07);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (28, 'Alonzo', 'Serridge', 'Podcat', 43128.21);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (29, 'Cathrin', 'Everly', 'Twinte', 2726.24);
-insert into mecanico (id, nombre, apellidos, dni, salario) values (30, 'Joann', 'McCraine', 'Fanoodle', 44646.95);
 
-ALTER SEQUENCE mecanico_seq RESTART WITH (80);
+
+ALTER SEQUENCE mecanico_seq RESTART WITH (60);

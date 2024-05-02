@@ -17,8 +17,8 @@ public class MecanicoController {
 	private MecanicoService mecanicoService;
 
 	@GetMapping("/mecanicos")
-	public String lista(Model model) {
-		model.addAttribute("listaCompleta", mecanicoService.findAll());
+	public String mostrarListaMecanicos(Model model) {
+		model.addAttribute("listaCompletaMecanicos", mecanicoService.findAll());
 		return "mecanicos";
 	}
 
@@ -35,7 +35,7 @@ public class MecanicoController {
 		// model.addAttribute("piloto", piloto);
 		mecanicoService.save(mecanico);
 
-		model.addAttribute("listaCompleta", mecanicoService.findAll());
+		model.addAttribute("listaCompletaMecanicos", mecanicoService.findAll());
 
 		return "mecanicos";
 	}

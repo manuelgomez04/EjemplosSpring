@@ -37,6 +37,6 @@ public class MecanicoController {
 
 		model.addAttribute("listaCompletaMecanicos", mecanicoService.findAll());
 
-		return "mecanicos";
+		return "redirect:/mecanicos";
 	}
 }

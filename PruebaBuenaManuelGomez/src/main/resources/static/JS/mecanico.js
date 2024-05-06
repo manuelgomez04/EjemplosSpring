@@ -1,5 +1,5 @@
 document.getElementById("addMecanicoButton").addEventListener("click", function() {
-    window.location.href = '/mecanicoFormAdd';
+    window.location.href = '/mecanicoFormulario';
 });
 
 document.getElementById("nextPageButton").addEventListener("click", function() {

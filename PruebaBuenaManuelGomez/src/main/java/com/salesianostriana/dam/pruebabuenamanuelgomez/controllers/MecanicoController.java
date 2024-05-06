@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.salesianostriana.dam.pruebabuenamanuelgomez.models.Mecanico;
@@ -26,7 +27,7 @@ public class MecanicoController {
 	public String adddMecanico(Model model) {
 		Mecanico mecanico = new Mecanico();
 		model.addAttribute("mecanicoForm", mecanico);
-		return "mecanicoFormAdd";
+		return "mecanicoForm";
 	}
 
 	@PostMapping("/addMecanico")
@@ -37,6 +38,23 @@ public class MecanicoController {
 
 		model.addAttribute("listaCompletaMecanicos", mecanicoService.findAll());
 
-		return "mecanicos";
+		return "redirect:/mecanicos";
+	}
+
+	@GetMapping("/editar/{id}")
+	public String editMecanico(@PathVariable("id") Long id, Model model) {
+
+		if (mecanicoService.findById(id).isPresent()) {
+			model.addAttribute("mecanicoForm", mecanicoService.findById(id).get());
+			return "mecanicoForm";
+		} else {
+			return "mecanicos";
+		}
+	}
+
+	@PostMapping("/editar/submit")
+	public String procesarFormularioEdicion(@ModelAttribute("mecanicoForm") Mecanico m) {
+		mecanicoService.save(m);
+		return "redirect:/mecanicos";
 	}
 }

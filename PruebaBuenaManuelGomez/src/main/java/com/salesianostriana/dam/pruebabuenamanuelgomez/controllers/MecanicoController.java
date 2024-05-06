@@ -23,7 +23,7 @@ public class MecanicoController {
 		return "mecanicos";
 	}
 
-	@GetMapping("/mecanicoFormAdd")
+	@GetMapping("/mecanicoFormulario")
 	public String adddMecanico(Model model) {
 		Mecanico mecanico = new Mecanico();
 		model.addAttribute("mecanicoForm", mecanico);
@@ -56,5 +56,11 @@ public class MecanicoController {
 	public String procesarFormularioEdicion(@ModelAttribute("mecanicoForm") Mecanico m) {
 		mecanicoService.save(m);
 		return "redirect:/mecanicos";
+	}
+	
+	@GetMapping("/borrar/{id}")
+	public String borrarMecanico (@PathVariable("id") Long id) {
+		mecanicoService.deleteById(id);
+		return"redirect:/mecanicos";
 	}
 }
